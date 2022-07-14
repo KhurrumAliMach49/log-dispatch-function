@@ -2,7 +2,7 @@
 const aws = require("aws-sdk");
 const cwl = new aws.CloudWatchLogs({
   apiVersion: "2014-03-28",
-  region: "us-west-1",
+  region: "us-east-1",
 });
 const ses = new aws.SES({ region: "us-east-1" });
 
@@ -37,7 +37,7 @@ let generateEmailContent = (data, message) => {
   
   </body>
   </html>`;
-  let subject = `Details for ERROR Alarm that was triggered`;
+  let subject = `Logs Details For The ALARM`;
 
   let emailContent = {
     Destination: {
